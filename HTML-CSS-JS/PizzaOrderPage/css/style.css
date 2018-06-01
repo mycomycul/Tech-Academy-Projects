@@ -1,0 +1,31 @@
+
+.jumbotron{
+    position: relative;
+    background: url("../images/sunrise.jpg" )20% 20%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+     
+}
+h3{
+    margin:px 0 0 0;
+}
+
+.priceSub {
+    color: #837f7f;
+    font-style:italic;
+    margin:0 0 -5px 0;
+}
+.wrapper{
+    border: 3px solid black;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#receipt{
+    display:none;
+}
+
+
+

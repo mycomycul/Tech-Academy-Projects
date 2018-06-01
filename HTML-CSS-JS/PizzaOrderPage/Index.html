@@ -1,0 +1,162 @@
+<!--Add GF option that grays out pizza sizes and adjusts prices-->
+<!DOCTYPE HTML>
+<HTML lang="en">
+
+<head>
+    <Title>Pizza Maker</Title>
+    <meta charset="utf-8">
+    <meta name="author" content="Michael Strunk">
+    <meta name="description" content="Pizza Ordering">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container wrapper mt-5">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3 text-white">Space Pizza</h1>
+                <p class="lead text-white ">How may we prepare your pizza?</p>
+            </div>
+        </div>
+
+        <ul class="nav nav-pills ml-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-crust-tab" data-toggle="pill" href="#pills-crust" role="tab" aria-controls="pills-crust"
+                    aria-selected="true">Crust</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-dressing-tab" data-toggle="pill" href="#pills-dressing" role="tab" aria-controls="pills-dressing"
+                    aria-selected="false">Sauce n' Cheese</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-toppings-tab" data-toggle="pill" href="#pills-toppings" role="tab" aria-controls="pills-toppings"
+                    aria-selected="false">Toppings</a>
+            </li>
+        </ul>
+
+        <form id="form1">
+            <div class="tab-content ml-3 mr-3 mt-3" id="pills-tabContent">
+                <div class="tab-pane fade show active text-left " id="pills-crust" role="tabpanel" aria-labelledby="pills-crust-tab">
+                    <div class="row">
+                        <div class="col-sm text-center ">
+                            <h3>What size Pizza:</h3>
+                            <p class="priceSub">Personal-6 &nbsp; Medium-10 &nbsp; Large-14 &nbsp; XLarge-16</p>
+                            <input type="radio" value="Personal" name="Size" id="Size1" checked>Personal</input>
+                            <input type="radio" value="Medium" name="Size">Medium</input>
+                            <input type="radio" value="Large" name="Size">Large</input>
+                            <input type="radio" value="Extra Large" name="Size">Extra Large</input>
+                        </div>
+
+                        <div class="col-sm text-center">
+                            <h3>What type of Crust?</h3>
+                            <p class="priceSub">Cheese Stuffed Crust-3</p>
+
+                            <input type="radio" value="Plain Crust" name="crust" checked>Plain</input>
+                            <input type="radio" value="Spicy Crust" name="crust">Spicy Crust</input>
+                            <input type="radio" value="House Special Crust!" name="crust">House Special!</input>
+                            <br>
+                            <input type="radio" value="Garlic Butter Crust" name="crust">Garlic Butter Crust</input>
+                            <input type="radio" value="Cheese Stuffed Crust" name="crust">Cheese Stuffed Crust</input>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-dressing" role="tabpanel" aria-labelledby="pills-dressing-tab">
+                    <div class="row">
+                        <div class="col text-center">
+
+                            <h3>How much Cheese?</h3>
+                            <p class="priceSub">Extra Cheese-3</p>
+
+                            <input type="radio" value="Regular" name="cheese" checked>Regular</input>
+                            <input type="radio" value="No Cheese" name="cheese">No Cheese</input>
+                            <input type="radio" value="Extra Cheese" name="cheese">Extra Cheese</input>
+                        </div>
+
+                        <div class="col text-center">
+                            <h3>Sauce Selection?</h3>
+                            <input type="radio" value="Marinara" name="sauce" checked>Marinara</input>
+                            <input type="radio" value="White Sauce" name="sauce">White Sauce</input>
+                            <br>
+                            <input type="radio" value="Barbecue Sauce" name="sauce">Barbecue Sauce</input>
+                            <input type="radio" value="No Sauce" name="sauce">No Sauce</input>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-toppings" role="tabpanel" aria-labelledby="pills-toppings-tab">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h3>What Meats whould you like?</h3>
+                            <p class="priceSub">First meat-free Additional-1</p>
+
+                            <input type="checkbox" value="Pepperoni" name="Meat">Pepperoni</input>
+                            <input type="checkbox" value="Sausage" name="Meat">Sausage</input>
+                            <input type="checkbox" value="Canadian Bacon" name="Meat">Canadian Bacon</input>
+                            <br>
+                            <input type="checkbox" value="Beef" name="Meat">Ground Beef</input>
+                            <input type="checkbox" value="Anchovy" name="Meat">Anchovy</input>
+                            <input type="checkbox" value="Chicken" name="Meat">Chicken</input>
+                        </div>
+
+                        <div class="col text-center">
+                            <h3>What Vegetables would you like?</h3>
+                            <p class="priceSub">First Veggie-free Additional-1</p>
+
+                            <input type="checkbox" value="Tomatoes" name="veggie" >Tomatoes</input>
+                            <input type="checkbox" value="Onions" name="veggie" >Onions</input>
+                            <input type="checkbox" value="Spinach" name="veggie" >Spinach</input>
+                            <input type="checkbox" value="Jalapeno" name="veggie" >Jalapeno</input>
+                            <br>
+                            <input type="checkbox" value="GreenPeppers" name="veggie" >Green Peppers</input>
+                            <input type="checkbox" value="Mushroom" name="veggie" >Mushrooms</input>
+                            <input type="checkbox" value="Pineapple" name="veggie" >Pineapple</input>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col">
+                        <button class="btn btn-outline-success  mt-3 btn-lg" type="button" id="button1" value="button" onclick="completeOrder();">Submit</button>
+                        <button class="btn btn-outline-danger  mt-3 btn-lg" type="button" id="button1" value="button" onclick="formReset()">Reset</button>
+                    </div>
+                </div>
+        </form>
+        </div>
+        <div class="container mt-5">
+            <div>
+                <div class="table-responsive">
+                    <!--Hidden Label-->
+                    <h2 class="display-5" id="receipt">Receipt</h2>
+                    <div>
+                        <table class="table " id="myTable"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+    </div>
+
+
+
+    <!--END PAGE CONTENT-->
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</HTML>

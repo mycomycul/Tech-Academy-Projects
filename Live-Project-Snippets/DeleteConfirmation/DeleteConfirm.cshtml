@@ -1,0 +1,66 @@
+<!-- Simple html element is displayed after checking if an image is attached to another part
+of the database and asks you to confirm if you want to delete both in the event that it
+is attached -->
+
+<head>
+    <stlye>
+        <!-- Styling for hidden delete confirm element -->
+    #confirm-delete-image 
+    {
+        position: absolute;
+        height: 100%;
+        width:100%;
+        background-color: rgba(0,0,0,0.8);
+        left: 0px;
+        top: 0px;
+        visibility: hidden;
+        z-index: 1000;   
+    }
+    </stlye>
+</head>
+
+<!-- Hidden Delete COnfirmation Element -->
+<div id="confirm-delete-image-text">
+    Deleting this image will delete the review<br /> Continue?
+    <p>
+        <span class="btn-image-action" id="go-back" onclick="returnToImage();">No</span>
+
+        @Html.ActionLink("Yes", "DeleteConfirmed", "Images", new { id = fileID }, new { @class = "btn-image-action" })
+    </p>
+</div>
+
+
+
+<!--  
+Image Modal with possible iamge actions like crop and delete
+ -->
+
+
+<!-- Delete action checks if the image is attached to another entity in the database 
+and calls the confirm function if so-->
+@{
+if (Model.reviewID == null)
+{ 
+    @Html.ActionLink("Delete", "DeleteConfirmed", "Images", new { id = fileID }, new { @class = "btn-image-action" })
+}
+else
+{
+    <span class="btn-image-action" id="btn-confirm-delete" onclick="confirmDelete();">Delete</span>
+}
+
+}
+
+
+<script>
+    /*Display Confirm Delete Element*/
+    function confirmDelete() {
+        $("#action-container #action-box").css('visibility', 'hidden');
+        $("#action-container #confirm-delete-image").css('visibility', 'visible');
+    }
+    /*Remove Confirm Delete Element. Should be called on modal close and when clicking "NO"*/
+    function returnToImage() {
+        $("#action-container #action-box").css('visibility', 'visible');
+        $("#action-container #confirm-delete-image").css('visibility', 'hidden');  
+    }
+    $('.modal').on('hide.bs.modal', returnToImage)
+</script>
