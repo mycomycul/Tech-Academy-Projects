@@ -1,4 +1,4 @@
-//For use in a modal that diaplys a list of items.
+//For use in a modal that disaplays a list of items.
 //Called on Modal load to reduce page load time.
 //post is the id of the post for which dynamically made comments are created
 
